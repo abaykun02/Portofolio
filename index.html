@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahnaf Chaisar Akbar | Web Developer & IT Support Portfolio</title>
+  <meta name="description"
+    content="Portofolio resmi Ahnaf Chaisar Akbar - Lulusan S1 Sistem Informasi UIN Sumatera Utara (IPK 3.84), Web Developer (PHP, Laravel, MySQL), IT Support, dan Data Enthusiast.">
+  <meta name="keywords"
+    content="Ahnaf Chaisar Akbar, Web Developer, IT Support, Laravel, PHP, MySQL, Portfolio, UINSU, CV Syifa COM, PT Telkom Indonesia">
+  <meta name="author" content="Ahnaf Chaisar Akbar">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Ahnaf Chaisar Akbar | Web Developer & IT Support">
+  <meta property="og:description"
+    content="Portofolio Personal Ahnaf Chaisar Akbar - Web Developer, IT & Operational, dan Lulusan Sistem Informasi UINSU.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%236366f1'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='50' font-weight='900' fill='white'>A</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons for crisp UI rendering -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- OPENING / WELCOME INTRO SPLASH SCREEN -->
+  <div id="preloader" class="preloader-overlay" aria-hidden="false">
+    <div class="preloader-glow"></div>
+    <div class="preloader-content">
+      <!-- Icon Badges: Code, Git, Person -->
+      <div class="preloader-icons">
+        <span class="preloader-icon-pill code-pill" title="Code">
+          <i class="fa-solid fa-code"></i>
+          <span>&lt;/&gt;</span>
+        </span>
+        <span class="preloader-icon-pill git-pill" title="Git">
+          <i class="fa-brands fa-git-alt"></i>
+          <span>Git</span>
+        </span>
+        <span class="preloader-icon-pill person-pill" title="Profile">
+          <i class="fa-solid fa-user-tie"></i>
+          <span>Ahnaf</span>
+        </span>
+      </div>
+
+      <!-- Welcome Typography Box -->
+      <div class="preloader-text-box">
+        <span class="preloader-greeting">WELCOME TO</span>
+        <h1 class="preloader-name">
+          <span class="gradient-text">Ahnaf Chaisar Akbar</span>
+        </h1>
+        <div class="preloader-badge-tag">
+          <span class="code-bracket">&lt;</span>
+          <span class="tag-title">PORTOFOLIO</span>
+          <span class="code-bracket">/&gt;</span>
+        </div>
+      </div>
+
+      <!-- Loading Bar & Status -->
+      <div class="preloader-loader-wrapper">
+        <div class="preloader-track">
+          <div class="preloader-fill" id="preloaderBar"></div>
+        </div>
+        <div class="preloader-status-row">
+          <span class="preloader-status-msg" id="preloaderStatus">Memuat sistem portofolio...</span>
+          <span class="preloader-counter" id="preloaderCounter">0%</span>
+        </div>
+      </div>
+
+      <!-- Quick Skip Button -->
+      <button type="button" class="preloader-skip" id="skipPreloader" aria-label="Lewati Animasi">
+        Lewati <i class="fa-solid fa-angles-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Ambient Glow Background Blobs -->
+  <div class="ambient-background" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar-wrapper">
+    <nav class="navbar container" id="navbar">
+      <a href="#hero" class="nav-logo" aria-label="Beranda Ahnaf">
+        <span class="logo-box">A</span>
+        <span class="logo-text">Ahnaf<span class="accent-dot">.</span></span>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li class="nav-item"><a href="#hero" class="nav-link active">Beranda</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Pengalaman</a></li>
+        <li class="nav-item"><a href="#projects" class="nav-link">Proyek</a></li>
+        <li class="nav-item"><a href="#certifications" class="nav-link">Sertifikasi</a></li>
+        <li class="nav-item"><a href="#gallery" class="nav-link">Galeri</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle-btn" aria-label="Beralih Tema Terang/Gelap" title="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon"></i>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-primary nav-contact-btn">Hubungi</a>
+        <button id="mobileToggle" class="mobile-toggle-btn" aria-label="Buka Menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 1. HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+
+        <div class="hero-content reveal-on-scroll">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Tersedia untuk Peluang Kerja & Proyek IT</span>
+          </div>
+
+          <h1 class="hero-title">
+            Halo, Saya <br>
+            <span class="gradient-text">Ahnaf Chaisar Akbar</span>
+          </h1>
+
+          <div class="typing-container">
+            <span class="typing-prefix">Fokus: </span>
+            <span class="typing-text" id="typingText"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-description">
+            Suka koding, ekplorasi AI, dan ngobrolin solusi teknis! Sebagai lulusan IT yang aktif dan komunikatif, saya
+            memadukan keahlian <strong>Full-Stack (PHP/Laravel)</strong> dan <strong>Manajemen Data</strong> untuk bantu
+            menyelesaikan berbagai tantangan teknologi. <em>Let’s build something awesome together!</em>
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fa-solid fa-laptop-code"></i>
+              Lihat Proyek
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-paper-plane"></i>
+              Hubungi Saya
+            </a>
+            <a href="CV.pdf" download="CV_Ahnaf_Chaisar_Akbar.pdf" class="btn btn-outline" target="_blank"
+              rel="noopener">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              Unduh CV
+            </a>
+          </div>
+
+          <div class="social-links-wrapper">
+            <span class="social-label">Koneksi Sosial:</span>
+            <div class="social-links">
+              <a href="https://github.com/abaykun02" target="_blank" rel="noopener" class="social-pill"
+                aria-label="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="https://wa.me/6281265349553" target="_blank" rel="noopener" class="social-pill"
+                aria-label="WhatsApp Chat">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a href="mailto:ahnafchaisar@gmail.com" class="social-pill" aria-label="Email Me">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-on-scroll">
+          <div class="avatar-card-wrapper">
+            <div class="avatar-glow"></div>
+
+            <!-- Interactive Stacked Deck Effect (Card Swiping / Infinite Stack Slider) -->
+            <div class="deck-container" id="stackedDeckContainer">
+              <div class="deck-stack" id="cardStack">
+                <!-- Card 1 -->
+                <div class="deck-card active-card" data-index="0">
+                  <div class="deck-card-inner">
+                    <img src="Profil/foto bg putih after cut.png" alt="Ahnaf Chaisar Akbar - Foto Profil"
+                      onerror="this.onerror=null; this.src='Profil/Pas foto Pakai Jas.jpeg';">
+                    <div class="deck-card-caption">
+                      <span class="deck-card-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Profil Utama</span>
+                      <h4 class="deck-card-name">Ahnaf Chaisar Akbar</h4>
+                      <p class="deck-card-role">Web Developer & IT Support</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <!-- Card 3 -->
+                <div class="deck-card" data-index="2">
+                  <div class="deck-card-inner">
+                    <img src="Profil/Foto Non formal 1.jpeg" alt="Ahnaf Chaisar Akbar - Dokumentasi Kegiatan">
+                    <div class="deck-card-caption">
+                      <span class="deck-card-badge"><i class="fa-solid fa-camera"></i> Galeri Aktivitas</span>
+                      <h4 class="deck-card-name">Aktivitas Kampus</h4>
+                      <p class="deck-card-role">Dinamis & Kolaboratif</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="deck-card" data-index="3">
+                  <div class="deck-card-inner">
+                    <img src="Profil/Foto Non Formal 2.jpeg" alt="Ahnaf Chaisar Akbar - Aktivitas Personal">
+                    <div class="deck-card-caption">
+                      <span class="deck-card-badge"><i class="fa-solid fa-star"></i> Momen Personal</span>
+                      <h4 class="deck-card-name">Aktivitas Non Formal</h4>
+                      <p class="deck-card-role">Pengembangan Diri & Relasi</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="deck-card" data-index="4">
+                  <div class="deck-card-inner">
+                    <img src="Profil/Foto Non formal 3.jpg" alt="Ahnaf Chaisar Akbar - Momen Santai">
+                    <div class="deck-card-caption">
+                      <span class="deck-card-badge"><i class="fa-solid fa-image"></i> Kreatif</span>
+                      <h4 class="deck-card-name">Dokumentasi Santai</h4>
+                      <p class="deck-card-role">Kreatif & Energik</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="deck-card" data-index="5">
+                  <div class="deck-card-inner">
+                    <img src="Profil/Foto Non Formal 4.jpeg" alt="Ahnaf Chaisar Akbar - Kebersamaan">
+                    <div class="deck-card-caption">
+                      <span class="deck-card-badge"><i class="fa-solid fa-images"></i> Kenangan</span>
+                      <h4 class="deck-card-name">Kebersamaan</h4>
+                      <p class="deck-card-role">Etos Kerja & Integritas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Deck Action Controls -->
+              <div class="deck-controls">
+                <button type="button" class="deck-nav-btn prev" id="deckPrevBtn" aria-label="Foto Sebelumnya"
+                  title="Foto Sebelumnya">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <button type="button" class="deck-nav-btn next" id="deckNextBtn"
+                  aria-label="Geser Kartu / Foto Berikutnya" title="Geser Foto">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+
+              <!-- Deck Dots Indicator -->
+              <div class="deck-dots" id="deckDots"></div>
+            </div>
+
+            <!-- Floating Tech Badges -->
+            <div class="floating-badge badge-laravel">
+              <i class="fa-brands fa-laravel"></i>
+              <span>Laravel & PHP</span>
+            </div>
+            <div class="floating-badge badge-sql">
+              <i class="fa-solid fa-database"></i>
+              <span>MySQL & DB</span>
+            </div>
+            <div class="floating-badge badge-excel">
+              <i class="fa-solid fa-file-excel"></i>
+              <span>Excel & Data</span>
+            </div>
+            <div class="floating-badge badge-ai">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <span>Gen AI Tools</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Quick Metrics Counter Strip -->
+      <div class="container">
+        <div class="stats-strip reveal-on-scroll">
+          <div class="stat-item">
+            <div class="stat-number">3.84<span class="stat-suffix">/4.00</span></div>
+            <div class="stat-label">IPK Cum Laude (UINSU)</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">4<span class="stat-suffix">+</span></div>
+            <div class="stat-label">Proyek Unggulan Selesai</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">13<span class="stat-suffix">+</span></div>
+            <div class="stat-label">Sertifikasi & Pelatihan</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">2<span class="stat-suffix"> Thn+</span></div>
+            <div class="stat-label">Pengalaman Kerja & Magang</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT & EDUCATION SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-user"></i> Tentang Diri</span>
+          <h2 class="section-title">Pendidikan & Keahlian Utama</h2>
+          <p class="section-subtitle">Kombinasi latar belakang akademik berprestasi di Sistem Informasi dengan
+            pengalaman praktis di dunia industri dan komputasi.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Biography & Education -->
+          <div class="about-info-col reveal-on-scroll">
+            <div class="card glass-card edu-card">
+              <div class="card-icon-header">
+                <div class="icon-circle primary-icon">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div>
+                  <span class="badge badge-accent">Pendidikan Formal</span>
+                  <h3 class="card-title-lg">S1 Sistem Informasi</h3>
+                </div>
+              </div>
+
+              <div class="edu-detail-meta">
+                <div class="meta-row">
+                  <i class="fa-solid fa-building-columns"></i>
+                  <strong>Universitas Islam Negeri Sumatera Utara (UINSU)</strong>
+                </div>
+                <div class="meta-row">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>Tahun Kelulusan: 2022 - 2026</span>
+                </div>
+                <div class="meta-row gpa-row">
+                  <i class="fa-solid fa-star"></i>
+                  <span>Indeks Prestasi Kumulatif (IPK): <strong>3.84 / 4.00</strong></span>
+                </div>
+              </div>
+
+              <p class="card-text">
+                Fokus studi mencakup Analisis & Perancangan Sistem, Basis Data Relasional, Rekayasa Perangkat Lunak Web,
+                Sistem Pendukung Keputusan (SPK), Data Mining, dan Tata Kelola Teknologi Informasi.
+              </p>
+            </div>
+
+            <!-- Graduation Moment Showcase Grid -->
+            <div class="graduation-photos-box">
+              <h4 class="sub-heading"><i class="fa-solid fa-camera"></i> Dokumentasi Akademik & Kelulusan</h4>
+              <p class="sub-desc">Momen kelulusan bersama pimpinan universitas dan fakultas:</p>
+
+              <div class="grad-gallery-grid">
+                <div class="grad-photo-item"
+                  onclick="openLightbox('Profil/Foto Sama rektor.jpeg', 'Foto Bersama Rektor UIN Sumatera Utara')">
+                  <img src="Profil/Foto Sama rektor.jpeg" alt="Foto Bersama Rektor UINSU" loading="lazy"
+                    onerror="this.src='Profil/Foto Non formal 1.jpeg'">
+                  <div class="grad-overlay">
+                    <span><i class="fa-solid fa-magnifying-glass-plus"></i> Bersama Rektor</span>
+                  </div>
+                </div>
+
+                <div class="grad-photo-item"
+                  onclick="openLightbox('Profil/Foto Sama dekan.jpeg', 'Foto Bersama Dekan FST UINSU')">
+                  <img src="Profil/Foto Sama dekan.jpeg" alt="Foto Bersama Dekan FST UINSU" loading="lazy"
+                    onerror="this.src='Profil/Foto Non Formal 2.jpeg'">
+                  <div class="grad-overlay">
+                    <span><i class="fa-solid fa-magnifying-glass-plus"></i> Bersama Dekan</span>
+                  </div>
+                </div>
+
+                <div class="grad-photo-item"
+                  onclick="openLightbox('Profil/Foto Sendiri Wisuda.jpeg', 'Momen Wisuda S1 Sistem Informasi')">
+                  <img src="Profil/Foto Sendiri Wisuda.jpeg" alt="Momen Wisuda Ahnaf Chaisar Akbar" loading="lazy"
+                    onerror="this.src='Profil/Pas foto Pakai Jas.jpeg'">
+                  <div class="grad-overlay">
+                    <span><i class="fa-solid fa-magnifying-glass-plus"></i> Wisuda S1 SI</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Tech Stack & Skill Matrix -->
+          <div class="skills-col reveal-on-scroll">
+            <div class="card glass-card skills-card">
+              <h3 class="card-title-lg">
+                <i class="fa-solid fa-microchip icon-accent"></i>
+                Ringkasan Keahlian & Tech Stack
+              </h3>
+              <p class="skills-intro">Teknologi dan perangkat lunak yang saya gunakan untuk membangun solusi web,
+                automasi data, dan manajemen operasional:</p>
+
+              <!-- Category 1: Web & Backend -->
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fa-solid fa-code"></i>
+                  <span>Web & Backend Development</span>
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-pill"><i class="fa-brands fa-php"></i> PHP</span>
+                  <span class="skill-pill"><i class="fa-brands fa-laravel"></i> Laravel Framework</span>
+                  <span class="skill-pill"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</span>
+                  <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                  <span class="skill-pill"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                  <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+                </div>
+              </div>
+
+              <!-- Category 2: Data & Productivity -->
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fa-solid fa-table"></i>
+                  <span>Data Processing & Administration</span>
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-pill"><i class="fa-solid fa-file-excel"></i> Microsoft Excel</span>
+                  <span class="skill-pill"><i class="fa-solid fa-file-word"></i> Microsoft Word</span>
+                  <span class="skill-pill"><i class="fa-solid fa-file-powerpoint"></i> Microsoft PowerPoint</span>
+                </div>
+              </div>
+
+              <!-- Category 3: AI, Design & Hardware -->
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  <span>AI, Hardware & IT Tools</span>
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-pill"><i class="fa-solid fa-robot"></i> Generative AI Tools</span>
+                  <span class="skill-pill"><i class="fa-solid fa-laptop-code"></i> AI-Assisted Coding</span>
+                  <span class="skill-pill"><i class="fa-solid fa-screwdriver-wrench"></i> Hardware &
+                    Troubleshooting</span>
+                  <span class="skill-pill"><i class="fa-solid fa-headset"></i> IT Technical Support</span>
+                  <span class="skill-pill"><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</span>
+                  <span class="skill-pill"><i class="fa-solid fa-image"></i> Adobe Photoshop</span>
+                  <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                </div>
+              </div>
+
+              <!-- Category 4: Soft Skills & Teamworking -->
+              <div class="skill-category">
+                <div class="category-header">
+                  <i class="fa-solid fa-users-gear"></i>
+                  <span>Soft Skills & Interpersonal</span>
+                </div>
+                <div class="skill-tags">
+                  <span class="skill-pill"><i class="fa-solid fa-people-group"></i> Teamworking & Collaboration</span>
+                  <span class="skill-pill"><i class="fa-solid fa-comments"></i> Communication Skill</span>
+                  <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> Problem Solving</span>
+                  <span class="skill-pill"><i class="fa-solid fa-clock"></i> Time Management & Discipline</span>
+                  <span class="skill-pill"><i class="fa-solid fa-bullhorn"></i> Public Speaking</span>
+                  <span class="skill-pill"><i class="fa-solid fa-arrows-spin"></i> Adaptability & Fast Learner</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. WORK EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-briefcase"></i> Riwayat Karier</span>
+          <h2 class="section-title">Pengalaman Kerja & Magang</h2>
+          <p class="section-subtitle">Rekam jejak profesional dalam administrasi bisnis, tata kelola data, dan
+            operasional IT industri telekomunikasi.</p>
+        </div>
+
+        <div class="timeline-wrapper reveal-on-scroll">
+
+          <!-- Experience 1: CV Syifa COM -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3 class="role-title">Administrator</h3>
+                  <div class="company-name">
+                    <i class="fa-solid fa-building"></i>
+                    <strong>CV Syifa COM</strong>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="badge badge-date"><i class="fa-regular fa-calendar"></i> April 2024 — Sekarang</span>
+                  <span class="badge badge-success"><i class="fa-solid fa-circle-check"></i> Aktif Bekerja</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="task-list">
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Menyusun dan mengelola <strong>laporan pemeliharaan serta pemasangan periklanan</strong>
+                      secara berkala dengan presisi tinggi menggunakan <strong>Microsoft Excel</strong> dan
+                      <strong>Microsoft Word</strong>.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Membuat <strong>faktur pajak</strong> secara tertib serta mengelola <strong>pengarsipan
+                        dokumen resmi</strong> dan korespondensi surat-menyurat perusahaan untuk menjamin transparansi
+                      akuntansi & legalitas operasional.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Melakukan koordinasi dengan tim teknis lapangan terkait jadwal monitoring titik-titik media
+                      periklanan luar ruang (outdoor advertising).</span>
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag-badge">Microsoft Excel</span>
+                  <span class="tag-badge">Faktur Pajak</span>
+                  <span class="tag-badge">Arsip Dokumen</span>
+                  <span class="tag-badge">Administrasi Periklanan</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 2: PT Telkom Indonesia -->
+          <div class="timeline-item">
+            <div class="timeline-dot">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <div class="timeline-card glass-card">
+              <div class="timeline-header">
+                <div class="role-company">
+                  <h3 class="role-title">IT & Operational Intern</h3>
+                  <div class="company-name">
+                    <i class="fa-solid fa-building"></i>
+                    <strong>PT Telkom Indonesia</strong>
+                  </div>
+                </div>
+                <div class="timeline-badge-group">
+                  <span class="badge badge-date"><i class="fa-regular fa-calendar"></i> 22 Juli 2024 — 22 Agustus
+                    2024</span>
+                  <span class="badge badge-accent"><i class="fa-solid fa-award"></i> Magang BUMN</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <ul class="task-list">
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Mengelola dan merekapitulasi <strong>data operasional proyek</strong> pada platform enterprise
+                      manajemen proyek Telkom yaitu <strong>TOMPS</strong>.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Merancang materi visual, infografis presentasi, dan <strong>kebutuhan grafis
+                        operasional</strong> harian menggunakan <strong>Adobe Photoshop</strong>.</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-circle-dot"></i>
+                    <span>Menyusun <strong>laporan pengecekan berkala</strong> dan melakukan verifikasi integritas data
+                      teknis sebelum dilaporkan kepada supervisor operasional.</span>
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag-badge">Platform TOMPS Telkom</span>
+                  <span class="tag-badge">IT Operation</span>
+                  <span class="tag-badge">Adobe Photoshop</span>
+                  <span class="tag-badge">Verifikasi Data Teknis</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. FEATURED PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-code-fork"></i> Portofolio Karya</span>
+          <h2 class="section-title">Proyek Unggulan</h2>
+          <p class="section-subtitle">Kumpulan aplikasi web dan implementasi sistem yang telah saya rancang
+            dan bangun secara tuntas.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-controls reveal-on-scroll">
+          <button class="filter-btn active" data-filter="all">Semua Proyek (4)</button>
+          <button class="filter-btn" data-filter="web">Web & SPK</button>
+          <button class="filter-btn" data-filter="datamining">Data Mining & Python</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Proyek 1: Utama (E-Commerce MARCOS) -->
+          <div class="project-card glass-card reveal-on-scroll" data-category="web">
+            <div class="project-badge-corner"><i class="fa-solid fa-crown"></i> Unggulan Utama</div>
+            <div class="project-image-box"
+              onclick="openLightbox('SS Projek/Ecommerce Dengan Marcos.png', 'Website E-Commerce Rekomendasi Paket Pernikahan Menggunakan MARCOS')">
+              <img src="SS Projek/Ecommerce Dengan Marcos.png"
+                alt="Website E-Commerce Rekomendasi Paket Pernikahan MARCOS" loading="lazy">
+              <div class="image-overlay">
+                <span><i class="fa-solid fa-arrow-up-right-from-square"></i> Perbesar Gambar</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-cat-pill">Sistem Informasi & SPK</span>
+                <span class="project-star"><i class="fa-solid fa-star"></i> Featured</span>
+              </div>
+
+              <h3 class="project-title">Website E-Commerce Rekomendasi Paket Pernikahan Menggunakan MARCOS</h3>
+
+              <p class="project-description">
+                Sistem e-commerce komprehensif yang mengimplementasikan Sistem Pendukung Keputusan (SPK) metode
+                <strong>MARCOS</strong> (Measurement of Alternatives and Ranking according to COmpromise Solution) untuk
+                memberikan rekomendasi paket pernikahan terbaik berdasarkan preferensi kriteria dan batas anggaran
+                pengguna secara objektif.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-php"></i> PHP</span>
+                <span class="tech-tag"><i class="fa-brands fa-laravel"></i> Laravel</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="tech-tag"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                <span class="tech-tag">SPK MARCOS</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/abaykun02/Website-Ecommerce-Rekomendasi-Paket-Pernikahan-Menggunakan-MARCOS"
+                  target="_blank" rel="noopener" class="btn btn-primary btn-block">
+                  <i class="fa-brands fa-github"></i>
+                  Lihat Repositori GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 2: Unggulan (Decision Tree C5.0 Lokasi Iklan) -->
+          <div class="project-card glass-card reveal-on-scroll" data-category="datamining">
+            <div class="project-badge-corner"><i class="fa-solid fa-fire"></i> Unggulan</div>
+            <div class="project-image-box"
+              onclick="openLightbox('SS Projek/Penilaian Lokasi .png', 'Model Decision Tree C5.0 Untuk Penilaian Lokasi Pemasangan Media Iklan')">
+              <img src="SS Projek/Penilaian Lokasi .png" alt="Model Decision Tree C5.0 Lokasi Pemasangan Media Iklan"
+                loading="lazy">
+              <div class="image-overlay">
+                <span><i class="fa-solid fa-arrow-up-right-from-square"></i> Perbesar Gambar</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-cat-pill">Data Mining & Machine Learning</span>
+                <span class="project-star"><i class="fa-solid fa-chart-line"></i> Analytics</span>
+              </div>
+
+              <h3 class="project-title">Model Decision Tree C5.0 Untuk Penilaian Lokasi Pemasangan Media Iklan</h3>
+
+              <p class="project-description">
+                Penerapan algoritma Data Mining <strong>Decision Tree C5.0</strong> untuk mengolah atribut spasial,
+                kepadatan lalu lintas, dan visibilitas guna menilai kelayakan lokasi terbaik pemasangan media periklanan
+                billboard komersial secara akurat.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag">Data Mining</span>
+                <span class="tech-tag">Decision Tree C5.0</span>
+                <span class="tech-tag">Predictive Model</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/abaykun02/Model-Decision-Tree-C5.0-Untuk-Penilaian-Lokasi-Pemasangan-Media-Iklan"
+                  target="_blank" rel="noopener" class="btn btn-secondary btn-block">
+                  <i class="fa-brands fa-github"></i>
+                  Lihat Repositori GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 3: Bantuan Desa -->
+          <div class="project-card glass-card reveal-on-scroll" data-category="web">
+            <div class="project-image-box"
+              onclick="openLightbox('SS Projek/Data Bantuan Desa.png', 'Sistem Informasi Data Bantuan Desa')">
+              <img src="SS Projek/Data Bantuan Desa.png" alt="Sistem Informasi Data Bantuan Desa" loading="lazy">
+              <div class="image-overlay">
+                <span><i class="fa-solid fa-arrow-up-right-from-square"></i> Perbesar Gambar</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-cat-pill">Web Application</span>
+                <span class="project-star"><i class="fa-solid fa-users"></i> Layanan Publik</span>
+              </div>
+
+              <h3 class="project-title">Sistem Informasi Data Bantuan Desa</h3>
+
+              <p class="project-description">
+                Aplikasi web pengelolaan dan pendataan penerima bantuan sosial di tingkat desa yang dirancang untuk
+                memastikan penyaluran bantuan tepat sasaran, transparan, serta memudahkan proses pencarian dan pelaporan
+                data warga.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-php"></i> PHP</span>
+                <span class="tech-tag"><i class="fa-solid fa-database"></i> MySQL</span>
+                <span class="tech-tag">Web Development</span>
+                <span class="tech-tag">CRUD System</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/abaykun02/Sistem-Informasi-Data-Bantuan-Desa" target="_blank" rel="noopener"
+                  class="btn btn-secondary btn-block">
+                  <i class="fa-brands fa-github"></i>
+                  Lihat Repositori GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Proyek 4: Prediksi Stok LPG C4.5 -->
+          <div class="project-card glass-card reveal-on-scroll" data-category="datamining">
+            <div class="project-image-box"
+              onclick="openLightbox('SS Projek/Stok Lpg.png', 'Prediksi Ketersediaan Stok LPG Menggunakan Algoritma C4.5')">
+              <img src="SS Projek/Stok Lpg.png" alt="Prediksi Ketersediaan Stok LPG C4.5" loading="lazy">
+              <div class="image-overlay">
+                <span><i class="fa-solid fa-arrow-up-right-from-square"></i> Perbesar Gambar</span>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-meta-top">
+                <span class="project-cat-pill">Data Mining & Prediction</span>
+                <span class="project-star"><i class="fa-solid fa-cubes"></i> Inventory</span>
+              </div>
+
+              <h3 class="project-title">Prediksi Ketersediaan Stok LPG Menggunakan Algoritma C4.5</h3>
+
+              <p class="project-description">
+                Model klasifikasi dan estimasi ketersediaan serta kebutuhan stok tabung gas LPG pangkalan dengan
+                algoritma <strong>C4.5</strong> untuk meminimalisasi risiko kelangkaan pasokan tabung gas bagi
+                masyarakat.
+              </p>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag"><i class="fa-brands fa-python"></i> Python</span>
+                <span class="tech-tag">Algoritma C4.5</span>
+                <span class="tech-tag">Data Mining</span>
+                <span class="tech-tag">Stock Forecasting</span>
+              </div>
+
+              <div class="project-footer">
+                <a href="https://github.com/abaykun02/c45-prediksi-ketersediaan-stok-lpg" target="_blank" rel="noopener"
+                  class="btn btn-secondary btn-block">
+                  <i class="fa-brands fa-github"></i>
+                  Lihat Repositori GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CERTIFICATIONS & TRAINING SECTION -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-certificate"></i> Pengembangan Kompetensi</span>
+          <h2 class="section-title">Sertifikasi & Pelatihan</h2>
+          <p class="section-subtitle">Daftar 13 sertifikat pelatihan, konferensi internasional, dan seminar resmi yang
+            telah diselesaikan. Klik pada sertifikat untuk melihat berkas resolusi tinggi.</p>
+        </div>
+
+        <!-- Filter Sertifikat -->
+        <div class="filter-controls reveal-on-scroll">
+          <button class="filter-btn-cert active" data-cert-filter="all">Semua (13)</button>
+          <button class="filter-btn-cert" data-cert-filter="ai-tech">Teknologi, Riset & AI</button>
+          <button class="filter-btn-cert" data-cert-filter="data-business">Data, Bisnis & Ekonomi</button>
+          <button class="filter-btn-cert" data-cert-filter="softskills">Komunikasi & Soft Skills</button>
+        </div>
+
+        <div class="cert-grid">
+
+          <!-- 1. Metadata Referensi -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="ai-tech">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/1.jpg', 'Webinar: Mencari Metadata Referensi Berkualitas & Reference Manager Tools')">
+              <img src="JPG/1.jpg" alt="Sertifikat 1" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#01 • AI & Riset</span>
+              <h4 class="cert-title">Webinar: Mencari Metadata Referensi Berkualitas & Reference Manager Tools</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> COINS & AIRA UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 20 Nov 2025</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/1.jpg', 'Webinar: Mencari Metadata Referensi Berkualitas & Reference Manager Tools')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. ICoSDTech -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="ai-tech">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/2.jpg', 'Certificate of Participant: 3rd International Conference of Science Development and Technology (ICoSDTech)')">
+              <img src="JPG/2.jpg" alt="Sertifikat 2" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#02 • Konferensi Internasional</span>
+              <h4 class="cert-title">Certificate of Participant: 3rd International Conference of Science Development and
+                Technology (ICoSDTech)</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 12 Okt 2023</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/2.jpg', 'Certificate of Participant: 3rd International Conference of Science Development and Technology (ICoSDTech)')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Bootcamp Excel -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="data-business">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/3.jpg', 'Bootcamp: Basic Microsoft Excel — MySkill x Deloitte')">
+              <img src="JPG/3.jpg" alt="Sertifikat 3" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#03 • Data & Spreadsheet</span>
+              <h4 class="cert-title">Bootcamp: Basic Microsoft Excel</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-award"></i> MySkill x Deloitte</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 21 Feb 2024</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/3.jpg', 'Bootcamp: Basic Microsoft Excel — MySkill x Deloitte')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Moderasi Beragama -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="softskills">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/4.jpg', 'Seminar Internasional: Peran Mahasantri Mewujudkan Moderasi Beragama')">
+              <img src="JPG/4.jpg" alt="Sertifikat 4" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#04 • Seminar Internasional</span>
+              <h4 class="cert-title">Seminar Internasional: Peran Mahasantri Mewujudkan Moderasi Beragama</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 26 Apr 2024</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/4.jpg', 'Seminar Internasional: Peran Mahasantri Mewujudkan Moderasi Beragama')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Kewirausahaan -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="data-business">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/5.jpg', 'Webinar Kewirausahaan: Membangun Rencana Dasar & Keistiqomahan Bisnis')">
+              <img src="JPG/5.jpg" alt="Sertifikat 5" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#05 • Bisnis & Kewirausahaan</span>
+              <h4 class="cert-title">Webinar Kewirausahaan: Membangun Rencana Dasar & Keistiqomahan Bisnis</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-users"></i> HMJ Matematika UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 24 Jun 2023</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/5.jpg', 'Webinar Kewirausahaan: Membangun Rencana Dasar & Keistiqomahan Bisnis')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Bank Indonesia -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="data-business">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/6.jpg', 'Sosialisasi: Peran dan Fungsi Bank Indonesia dalam Stabilitas Moneter')">
+              <img src="JPG/6.jpg" alt="Sertifikat 6" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#06 • Kebijakan Finansial</span>
+              <h4 class="cert-title">Sosialisasi: Peran dan Fungsi Bank Indonesia dalam Stabilitas Moneter</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-landmark"></i> FIS UINSU x Bank Indonesia</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 12 Apr 2023</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/6.jpg', 'Sosialisasi: Peran dan Fungsi Bank Indonesia dalam Stabilitas Moneter')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. SDGs Lingkungan -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="ai-tech">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/7.jpg', 'Seminar Nasional: Peran Sains & Teknologi dalam SDGs Lingkungan')">
+              <img src="JPG/7.jpg" alt="Sertifikat 7" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#07 • Seminar Nasional</span>
+              <h4 class="cert-title">Seminar Nasional: Peran Sains & Teknologi dalam SDGs Lingkungan</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> FST UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 8 Nov 2022</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/7.jpg', 'Seminar Nasional: Peran Sains & Teknologi dalam SDGs Lingkungan')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. KKN Reguler -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="softskills">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/8.jpg', 'Sertifikat Kuliah Kerja Nyata (KKN) Reguler 4 SKS')">
+              <img src="JPG/8.jpg" alt="Sertifikat 8" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#08 • Pengabdian Masyarakat</span>
+              <h4 class="cert-title">Sertifikat Kuliah Kerja Nyata (KKN) Reguler 4 SKS</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-hands-holding-child"></i> LP2M UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> Agt - Sep 2025</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/8.jpg', 'Sertifikat Kuliah Kerja Nyata (KKN) Reguler 4 SKS')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Inspira Class Public Speaking -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="softskills">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/9.jpg', 'Webinar Inspira Class: Seni Memantaskan & Menyampaikan Pesan (Public Speaking)')">
+              <img src="JPG/9.jpg" alt="Sertifikat 9" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#09 • Public Speaking</span>
+              <h4 class="cert-title">Webinar Inspira Class: Seni Memantaskan & Menyampaikan Pesan</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-microphone"></i> Inspira Class Indonesia</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 23 Jan 2026</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/9.jpg', 'Webinar Inspira Class: Seni Memantaskan & Menyampaikan Pesan (Public Speaking)')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Hypno Communication -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="softskills">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/10.jpg', 'International Seminar: Hypno Communication & The Science of Luck Life')">
+              <img src="JPG/10.jpg" alt="Sertifikat 10" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#10 • Komunikasi Efektif</span>
+              <h4 class="cert-title">International Seminar: Hypno Communication & The Science of Luck Life</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-bullhorn"></i> ITMB</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 15 Mei 2022</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/10.jpg', 'International Seminar: Hypno Communication & The Science of Luck Life')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Communication Skill USU -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="softskills">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/11.jpg', 'Seminar Nasional: Communication Skill & Mindpower')">
+              <img src="JPG/11.jpg" alt="Sertifikat 11" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#11 • Leadership & Mindset</span>
+              <h4 class="cert-title">Seminar Nasional: Communication Skill & Mindpower</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-building-columns"></i> PEMA Universitas Sumatera Utara</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 2 Okt 2022</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/11.jpg', 'Seminar Nasional: Communication Skill & Mindpower')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 12. AI Writing Assistant -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="ai-tech">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/12.png', 'Webinar AIRA & COINS: AI Writing Assistant vs AI-Generated Writing')">
+              <img src="JPG/12.png" alt="Sertifikat 12" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#12 • Generative AI</span>
+              <h4 class="cert-title">Webinar AIRA & COINS: AI Writing Assistant vs AI-Generated Writing</h4>
+              <p class="cert-issuer"><i class="fa-solid fa-robot"></i> UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 4 Des 2025</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/12.png', 'Webinar AIRA & COINS: AI Writing Assistant vs AI-Generated Writing')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 13. Visualisasi Hasil Penelitian dengan AI -->
+          <div class="cert-card glass-card reveal-on-scroll" data-cert-cat="ai-tech">
+            <div class="cert-thumb-box"
+              onclick="openLightbox('JPG/13.png', 'Webinar AIRA & COINS (Sertifikat Panitia): Visualisasi Langkah Penelitian & Tampilan Visual Hasil Penelitian dengan AI')">
+              <img src="JPG/13.png" alt="Sertifikat 13" loading="lazy">
+              <div class="cert-zoom-badge"><i class="fa-solid fa-expand"></i> Zoom</div>
+            </div>
+            <div class="cert-info">
+              <span class="cert-number">#13 • Kepanitiaan & AI</span>
+              <h4 class="cert-title">Webinar AIRA & COINS (Sertifikat Panitia): Visualisasi Hasil Penelitian dengan AI
+              </h4>
+              <p class="cert-issuer"><i class="fa-solid fa-chart-pie"></i> UINSU</p>
+              <div class="cert-meta-bottom">
+                <span class="cert-date"><i class="fa-regular fa-calendar"></i> 11 Des 2025</span>
+                <button class="cert-view-btn"
+                  onclick="openLightbox('JPG/13.png', 'Webinar AIRA & COINS (Sertifikat Panitia): Visualisasi Langkah Penelitian & Tampilan Visual Hasil Penelitian dengan AI')">
+                  Lihat Berkas <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALLERY & ACTIVITIES SECTION -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-images"></i> Dokumentasi & Aktivitas</span>
+          <h2 class="section-title">Galeri Foto Personal</h2>
+          <p class="section-subtitle">Potret kegiatan, dinamika perkuliahan, dan aktivitas non-formal yang mencerminkan
+            etos kerja dinamis dan kolaboratif.</p>
+        </div>
+
+        <div class="photo-gallery-grid reveal-on-scroll">
+
+          <!-- Foto Formal Berjas -->
+          <div class="gallery-card"
+            onclick="openLightbox('Profil/Pas foto Pakai Jas.jpeg', 'Pas Foto Formal (Pakai Jas)')">
+            <img src="Profil/Pas foto Pakai Jas.jpeg" alt="Pas Foto Formal Pakai Jas" loading="lazy">
+            <div class="gallery-card-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>Pas Foto Formal (Berjas)</span>
+            </div>
+          </div>
+
+          <div class="gallery-card"
+            onclick="openLightbox('Profil/Foto Non formal 1.jpeg', 'Aktivitas Personal & Kampus #1')">
+            <img src="Profil/Foto Non formal 1.jpeg" alt="Foto Non Formal 1" loading="lazy">
+            <div class="gallery-card-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>Dokumentasi #1</span>
+            </div>
+          </div>
+
+          <div class="gallery-card"
+            onclick="openLightbox('Profil/Foto Non Formal 2.jpeg', 'Aktivitas Personal & Kampus #2')">
+            <img src="Profil/Foto Non Formal 2.jpeg" alt="Foto Non Formal 2" loading="lazy">
+            <div class="gallery-card-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>Dokumentasi #2</span>
+            </div>
+          </div>
+
+          <div class="gallery-card"
+            onclick="openLightbox('Profil/Foto Non formal 3.jpg', 'Aktivitas Personal & Kampus #3')">
+            <img src="Profil/Foto Non formal 3.jpg" alt="Foto Non Formal 3" loading="lazy">
+            <div class="gallery-card-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>Dokumentasi #3</span>
+            </div>
+          </div>
+
+          <div class="gallery-card"
+            onclick="openLightbox('Profil/Foto Non Formal 4.jpeg', 'Aktivitas Personal & Kampus #4')">
+            <img src="Profil/Foto Non Formal 4.jpeg" alt="Foto Non Formal 4" loading="lazy">
+            <div class="gallery-card-overlay">
+              <i class="fa-solid fa-expand"></i>
+              <span>Dokumentasi #4</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT & FOOTER SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Terhubung Bersama</span>
+          <h2 class="section-title">Hubungi Saya</h2>
+          <p class="section-subtitle">Tertarik merekrut atau mendiskusikan peluang proyek web dan operasional IT? Jangan
+            ragu untuk mengirimkan pesan!</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Channels Info -->
+          <div class="contact-cards-col reveal-on-scroll">
+
+            <!-- Email -->
+            <a href="mailto:ahnafchaisar@gmail.com" class="contact-channel-card glass-card">
+              <div class="channel-icon email-icon">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Email Utama</span>
+                <strong class="channel-val">ahnafchaisar@gmail.com</strong>
+                <span class="channel-hint">Klik untuk kirim surel langsung</span>
+              </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6281265349553?text=Halo%20Ahnaf,%20saya%20tertarik%20dengan%20portofolio%20Anda."
+              target="_blank" rel="noopener" class="contact-channel-card glass-card">
+              <div class="channel-icon wa-icon">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">WhatsApp Resmi</span>
+                <strong class="channel-val">+62 812-6534-9553</strong>
+                <span class="channel-hint">Respon cepat via perpesanan instan</span>
+              </div>
+            </a>
+
+            <!-- Lokasi -->
+            <div class="contact-channel-card glass-card">
+              <div class="channel-icon loc-icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Domisili & Lokasi</span>
+                <strong class="channel-val">Pematang Siantar / Medan, Sumatera Utara</strong>
+                <span class="channel-hint">Terbuka untuk On-site & Remote Work</span>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <a href="https://github.com/abaykun02" target="_blank" rel="noopener"
+              class="contact-channel-card glass-card">
+              <div class="channel-icon git-icon">
+                <i class="fa-brands fa-github"></i>
+              </div>
+              <div class="channel-details">
+                <span class="channel-name">Profil GitHub</span>
+                <strong class="channel-val">github.com/abaykun02</strong>
+                <span class="channel-hint">Jelajahi source code proyek terbuka</span>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Interactive Message Form -->
+          <div class="contact-form-col reveal-on-scroll">
+            <div class="glass-card form-card">
+              <h3 class="card-title-lg">
+                <i class="fa-solid fa-comment-dots icon-accent"></i>
+                Kirim Pesan Langsung
+              </h3>
+              <p class="form-instructions">Pesan yang Anda ketik dapat langsung diteruskan ke WhatsApp atau Email dengan
+                satu klik praktis:</p>
+
+              <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-group">
+                  <label for="senderName" class="form-label">Nama Lengkap / Instansi</label>
+                  <input type="text" id="senderName" class="form-input" placeholder="Contoh: HRD PT Maju Jaya" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderSubject" class="form-label">Perihal / Keperluan</label>
+                  <input type="text" id="senderSubject" class="form-input"
+                    placeholder="Tawaran Pekerjaan Web Developer / IT Support" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="senderMessage" class="form-label">Isi Pesan</label>
+                  <textarea id="senderMessage" class="form-textarea" rows="4"
+                    placeholder="Halo Ahnaf, kami tertarik mendiskusikan peluang karir bersama tim kami..."
+                    required></textarea>
+                </div>
+
+                <div class="form-action-row">
+                  <button type="button" class="btn btn-secondary" onclick="sendViaEmail()">
+                    <i class="fa-solid fa-envelope"></i>
+                    Kirim via Email
+                  </button>
+                  <button type="submit" class="btn btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Kirim via WhatsApp
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">
+          <span class="logo-box">A</span>
+          <span class="logo-text">Ahnaf<span class="accent-dot">.</span></span>
+        </a>
+        <p class="footer-tagline">Web Developer & IT Support Specialist lulusan S1 Sistem Informasi UINSU. Berkomitmen
+          menciptakan solusi digital berdaya guna.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <span class="footer-heading">Navigasi Pintar</span>
+        <ul class="footer-nav">
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#experience">Pengalaman</a></li>
+          <li><a href="#projects">Proyek Unggulan</a></li>
+          <li><a href="#certifications">Sertifikasi</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <span class="footer-heading">Unduhan & Berkas</span>
+        <ul class="footer-nav">
+          <li><a href="CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-pdf"></i> Unduh Curriculum
+              Vitae</a></li>
+          <li><a href="https://github.com/abaykun02" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>
+              Repositori GitHub</a></li>
+          <li><a href="https://wa.me/6281265349553" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>
+              Chat WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Ahnaf Chaisar Akbar. Hak Cipta Dilindungi.</p>
+      <div class="footer-back-to-top">
+        <a href="#hero" aria-label="Kembali ke atas"><i class="fa-solid fa-chevron-up"></i> Ke Atas</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL FOR PREVIEWING IMAGES/CERTIFICATES -->
+  <div id="imageLightbox" class="lightbox-modal" aria-hidden="true" onclick="closeLightbox(event)">
+    <div class="lightbox-dialog" onclick="event.stopPropagation()">
+      <div class="lightbox-header">
+        <h4 id="lightboxTitle" class="lightbox-title">Pratinjau Sertifikat / Gambar</h4>
+        <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Tutup Pratinjau">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightboxImg" src="" alt="Pratinjau Resolusi Tinggi" class="lightbox-image">
+      </div>
+      <div class="lightbox-footer">
+        <a id="lightboxDownloadBtn" href="" download class="btn btn-sm btn-outline">
+          <i class="fa-solid fa-download"></i> Unduh Berkas Asli
+        </a>
+        <button type="button" class="btn btn-sm btn-secondary" onclick="closeLightbox()">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+</body>
+
+</html>
